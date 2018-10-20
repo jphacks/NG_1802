@@ -52,8 +52,8 @@ class RecordPlan:
 		self.gsse.writeData_same("B", "")
 
 
-r = RecordPlan("CookingPlan")
+#r = RecordPlan("CookingPlan")
 
-l = ["qwer", "asdfadsf", "adsfadsf", "asdfsafpjpewfjwq"]
+#l = ["qwer", "asdfadsf", "adsfadsf", "asdfsafpjpewfjwq"]
 
-r.set_phase(l)
+#r.set_phase(l)

@@ -21,4 +21,9 @@ standard_dic = {}
 for e in standard:
 	standard_dic.setdefault(e.split(",")[0], e.split(",")[1])
 
-print(gsse.readDate_all()[1])
+personal_list = gsse.readDate_all()
+
+for line in range(1, len(personal_list)):
+
+
+# print(gsse.readDate_all()[1])

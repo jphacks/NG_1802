@@ -18,7 +18,7 @@ class RecordPlan:
 
 	def pop_phase(self):
 		self.update_phase()
-		read = read_phase()
+		read = self.read_phase()
 
 		if read == -1:
 			return 'null'

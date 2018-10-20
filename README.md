@@ -1,4 +1,6 @@
-# サンプル（プロダクト名）
+# 重要！！このブランチはテンプレートです！！弄らないでください
+
+## サンプル（プロダクト名）
 
 [![Product Name](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
 

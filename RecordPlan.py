@@ -31,6 +31,11 @@ class RecordPlan:
 
 	def reset_phase(self):
 		self.gsse.writeDate_cell("A2", -1)
+		self.gsse.writeDate_cell("A4", -1)
+		self.gsse.writeData_same("B", "")
+
+	def test(self):
+		self.gsse.writeData_same("B", "")
 
 
 r = RecordPlan("CookingPlan")

@@ -23,7 +23,11 @@ for e in standard:
 
 personal_list = gsse.readDate_all()
 
-for line in range(1, len(personal_list)):
+for index in range(1, len(personal_list)):
+	temp = 0
+	for line in personal_list:
+		temp += line[index]
 
+	
 
 # print(gsse.readDate_all()[1])

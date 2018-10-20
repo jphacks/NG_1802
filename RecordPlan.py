@@ -20,12 +20,12 @@ class RecordPlan:
 		self.update_phase()
 		read = self.read_phase()
 
-		if read == -1:
+		if read == "-1":
 			return 'null'
 
-		recipe = self.gsse.readDate_cell("A" + str(read))
+		recipe = self.gsse.readDate_cell("B" + str(read))
 
-		if recipe == -1:
+		if recipe == "-1":
 			return 'null'
 
 		return recipe

@@ -29,8 +29,6 @@
 
 (意味) issue18通りにHogehoge.pyのバグを修正したよ
 
-<<<<<<< HEAD
-=======
 ## ディレクトリツリー
 
 ```
@@ -84,4 +82,3 @@
     │   └── GoogleSpreadSheetEditor.py
     └── main_tset.py
 ```
->>>>>>> develop

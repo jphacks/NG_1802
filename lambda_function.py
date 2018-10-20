@@ -39,13 +39,10 @@ def lambda_handler(event, context):
         elif intent_name == "next":
             code = intent["slots"]["next_key"]["resolutions"]["resolutionsPerAuthority"][0]["status"]["code"]
             if code == "ER_SUCCESS_MATCH":
-                if cook_plan.judge_over():
-                    name = "ちゃんと覚えろ"
-                else:
-                    cook_plan.reset_phase()
-                    name = "問題が起きました"
+                name = cook_plan.pop_phase()
+                if name == "null":
+                    name = "もうつぎの工程はありません"
                 should_end_session = True
-                
             else:
                 name =  "日本語を喋ろう"
                 

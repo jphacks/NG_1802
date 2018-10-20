@@ -18,14 +18,14 @@ class RecordPlan:
 
 	def pop_phase(self):
 		self.update_phase()
-		read = read_phase()
+		read = self.read_phase()
 
-		if read == -1:
+		if read == "-1":
 			return 'null'
 
-		recipe = self.gsse.readDate_cell("A" + str(read))
+		recipe = self.gsse.readDate_cell("B" + str(read))
 
-		if recipe == -1:
+		if recipe == "-1":
 			return 'null'
 
 		return recipe
@@ -52,8 +52,8 @@ class RecordPlan:
 		self.gsse.writeData_same("B", "")
 
 
-r = RecordPlan("CookingPlan")
+#r = RecordPlan("CookingPlan")
 
-l = ["qwer", "asdfadsf", "adsfadsf", "asdfsafpjpewfjwq"]
+#l = ["qwer", "asdfadsf", "adsfadsf", "asdfsafpjpewfjwq"]
 
-r.set_phase(l)
+#r.set_phase(l)

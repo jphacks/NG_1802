@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # ここを代理のマスターとして定義
-=======
+
 # [重要] 作業ブランチは基本developで行う
 
 ## masterへのpush、ダメ！絶対！！！
@@ -29,4 +28,4 @@
 `[fix] #18 Hogehoge.pyを修正`
 
 (意味) issue18通りにHogehoge.pyのバグを修正したよ
->>>>>>> origin/develop
+

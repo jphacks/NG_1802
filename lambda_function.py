@@ -1,11 +1,12 @@
 import requests
 import sys
+import RecordPlan as rp
 sys.path.append("src/kernel/")
 import RecipeSelecter as res
-sys.path.append("tools/google/")
-import GoogleSpreadSheetEditor as gs
+
 
 def lambda_handler(event, context):
+    cook_plan = rp.RecordPlan("CookingPlan")
     name = "こんにちは"
     should_end_session = False
     #ggs = gs.GoogleSpreadSheetEditor("PersonalNutritionList_A")
@@ -27,6 +28,10 @@ def lambda_handler(event, context):
                 material = "\n" + material
                 line(material)
                 line(recipe_sort(recipe))
+                
+                cook_plan.reset_phase()
+                cook_plan.set_phase(recipe)
+                
                 should_end_session = True
             else:
                 name = "そんなレシピは知りません"
@@ -34,7 +39,11 @@ def lambda_handler(event, context):
         elif intent_name == "next":
             code = intent["slots"]["next_key"]["resolutions"]["resolutionsPerAuthority"][0]["status"]["code"]
             if code == "ER_SUCCESS_MATCH":
-                name = "ちゃんと覚えろ"
+                if cook_plan.judge_over():
+                    name = "ちゃんと覚えろ"
+                else:
+                    cook_plan.reset_phase()
+                    name = "問題が起きました"
                 should_end_session = True
                 
             else:

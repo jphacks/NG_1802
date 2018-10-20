@@ -1,4 +1,7 @@
 import random
+import sys, os
+
+sys.path.append('../../')
 
 path = 'data/Standard_Data.csv'
 

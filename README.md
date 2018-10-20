@@ -29,3 +29,59 @@
 
 (意味) issue18通りにHogehoge.pyのバグを修正したよ
 
+<<<<<<< HEAD
+=======
+## ディレクトリツリー
+
+```
+├── LICENSE
+├── README.md
+├── RecordPlan.py
+├── docs
+│   └── _config.yml
+├── image.png
+├── lambda_function.py
+├── src
+│   ├── cook
+│   │   ├── gyoza
+│   │   │   ├── material.dic
+│   │   │   └── recipe.csv
+│   │   ├── harumaki
+│   │   │   ├── material.dic
+│   │   │   └── recipe.csv
+│   │   ├── nikujaga
+│   │   │   ├── material.dic
+│   │   │   └── recipe.csv
+│   │   ├── okonomiyaki
+│   │   │   ├── material.dic
+│   │   │   └── recipe.csv
+│   │   ├── omuraisu
+│   │   │   ├── material.dic
+│   │   │   └── recipe.csv
+│   │   └── tya-han
+│   │       ├── material.dic
+│   │       └── recipe.csv
+│   └── kernel
+│       ├── Malnutrition.py
+│       ├── RecipeSelecter.py
+│       ├── data
+│       │   └── Standard_Data.csv
+│       └── find_cook.py
+├── test
+│   ├── README.md
+│   └── find_cook_test.py
+└── tools
+    ├── database
+    │   ├── Cookpad.py
+    │   ├── IngredientReader.py
+    │   ├── __pycache__
+    │   │   └── IngredientReader.cpython-36.pyc
+    │   ├── createDB.py
+    │   ├── data
+    │   │   └── database.csv
+    │   └── test.py
+    ├── google
+    │   └── GoogleSpreadSheetEditor.py
+    └── main_tset.py
+```
+>>>>>>> develop

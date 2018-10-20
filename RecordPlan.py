@@ -14,7 +14,21 @@ class RecordPlan:
 		return self.gsse.readDate_cell("A2")
 
 	def read_all_phase(self):
-		return self.gsse.readDate_cell("B2")
+		return self.gsse.readDate_cell("A4")
+
+	def pop_phase(self):
+		self.update_phase()
+		read = read_phase()
+
+		if read == -1:
+			return 'null'
+
+		recipe = self.gsse.readDate_cell("A" + str(read))
+
+		if recipe == -1:
+			return 'null'
+
+		return recipe
 
 	def update_phase(self):
 		read = int(self.read_phase())
@@ -23,24 +37,23 @@ class RecordPlan:
 		else:
 			print("フェーズがありません。")
 
-	def set_phase(self, full):
-		self.gsse.writeDate_cell("B2", full)
+	def set_phase(self, recipe_list):
+		i = 1
+		for l in recipe_list:
+			self.gsse.writeDate_cell("B" + str(i), l)
+			i += 1
+
+		self.gsse.writeDate_cell("B" + str(i), -1)
 		self.gsse.writeDate_cell("A2", 0)
 
 	def reset_phase(self):
 		self.gsse.writeDate_cell("A2", -1)
-		self.gsse.writeDate_cell("B2", -1)
-
-	def judge_over(self):
-		read = int(self.read_phase())
-		if read == -1:
-			return False
-
-		if int(self.read_all_phase()) >= read:
-			return True
-		return False
+		self.gsse.writeDate_cell("A4", -1)
+		self.gsse.writeData_same("B", "")
 
 
 r = RecordPlan("CookingPlan")
 
-print(r.judge_over())
+l = ["qwer", "asdfadsf", "adsfadsf", "asdfsafpjpewfjwq"]
+
+r.set_phase(l)

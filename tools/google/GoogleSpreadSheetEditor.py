@@ -29,6 +29,12 @@ class GoogleSpreadSheetEditor:
 			cell_row[i].value = list[i]
 		self.wks.update_cells(cell_row)
 
+	def writeData_same(self, row, data):
+		cell_row = self.wks.range(row + str(1) + ":" + row + str(1000))
+		for i in range(0, 1000):
+			cell_row[i].value = data
+		self.wks.update_cells(cell_row)
+
 	def readDate_cell(self, cell):
 		return self.wks.acell(str(cell)).value
 

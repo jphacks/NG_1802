@@ -23,8 +23,10 @@ class RecordPlan:
 		else:
 			print("フェーズがありません。")
 
-	def set_phase(self, full):
-		self.gsse.writeDate_cell("B2", full)
+	def set_phase(self, recipe_list):
+		for i in range(len(recipe_list)):
+			self.gsse.writeDate_cell("B" + str(i + 1), recipe_list[i])
+
 		self.gsse.writeDate_cell("A2", 0)
 
 	def reset_phase(self):

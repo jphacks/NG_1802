@@ -14,7 +14,7 @@ class RecordPlan:
 		return self.gsse.readDate_cell("A2")
 
 	def read_all_phase(self):
-		return self.gsse.readDate_cell("B2")
+		return self.gsse.readDate_cell("A4")
 
 	def update_phase(self):
 		read = int(self.read_phase())
@@ -31,18 +31,8 @@ class RecordPlan:
 
 	def reset_phase(self):
 		self.gsse.writeDate_cell("A2", -1)
-		self.gsse.writeDate_cell("B2", -1)
-
-	def judge_over(self):
-		read = int(self.read_phase())
-		if read == -1:
-			return False
-
-		if int(self.read_all_phase()) >= read:
-			return True
-		return False
 
 
 r = RecordPlan("CookingPlan")
 
-print(r.judge_over())
+print(r.test())

@@ -8,7 +8,6 @@ cook_list = []
 key_list = []
 with open('../../src/cook/omuraisu/material.dic', 'r') as file:
 	cook_list = file.readlines()
-<<<<<<< HEAD
 	for cook_dict in cook_list:
 		cook_dict = eval(cook_dict)
 		key_ = list(cook_dict.keys())  #１つのメニューを完成させるための材料
@@ -51,7 +50,6 @@ print(type(l2a))
 for l in l2a:
 	with open('../../src/cook/omuraisu/nutrient.txt', 'w') as file:
 			file.writelines(str(l))
-=======
 	key_list = []
 	for cook_dict in cook_list:
 		cook_dict = eval(cook_dict)
@@ -84,6 +82,5 @@ stops
 		#print("食塩相当量の合計値:",sum_solt)
 			#nutrient_list.append(result)
 			#print(type(result))
->>>>>>> 9efe54f8329decca8c3761ae4ee02b7562fc0cd0
 
 stops

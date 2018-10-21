@@ -1,6 +1,6 @@
 # ecook
 
-[![ecook](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
+[![ecook](alexa.png)](https://youtu.be/NxJs84JIkbA)
 
 ## 製品概要
 ### Cooking × Tech

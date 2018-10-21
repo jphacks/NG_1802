@@ -15,7 +15,9 @@ with open('../../src/cook/omuraisu/material.dic', 'r') as file:
 	for i in key_list:
 		for j in i:
 			#nutrient_list = []
-			#print(j)
+			print(j)
 			result = ingredientReader.getIngredient(j)
-            if not "<class 'int'>" == str(type(result)):
+			if not "<class 'int'>" == str(type(result)):
 				print(result)
+				print("\n")
+

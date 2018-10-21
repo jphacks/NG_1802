@@ -70,13 +70,16 @@
     ├── database
     │   ├── Cookpad.py
     │   ├── IngredientReader.py
-    │   ├── __pycache__
-    │   │   └── IngredientReader.cpython-36.pyc
     │   ├── createDB.py
     │   ├── data
     │   │   └── database.csv
     │   └── test.py
     ├── google
-    │   └── GoogleSpreadSheetEditor.py
+    │   ├── GoogleSpreadSheetEditor.py
+    │   ├── README.md
+    │   ├── SSGA-3d11131f4a36.json
+    │   └── __pycache__
+    │       └── GoogleSpreadSheetEditor.cpython-35.pyc
     └── main_tset.py
+
 ```

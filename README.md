@@ -1,6 +1,6 @@
 # ecook
 
-[![Product Name](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
+[![ecook](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
 
 ## 製品概要
 ### Cooking × Tech
@@ -50,10 +50,10 @@
 * random
 * gspread
 * oauth2client
+* Amazon Web Services
 
 #### デバイス
 * amazon echo
-* 
 
 ### 研究内容・事前開発プロダクト（任意）
 ご自身やチームの研究内容や、事前に持ち込みをしたプロダクトがある場合は、こちらに実績なども含め記載をして下さい。

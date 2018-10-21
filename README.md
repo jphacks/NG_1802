@@ -1,85 +1,68 @@
-# [重要] 作業ブランチは基本developで行う
+# ecook
 
-## masterへのpush、ダメ！絶対！！！
+[![ecook](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
 
-## submasterをmasterの代わりとして使用する
+## 製品概要
+### Cooking × Tech
 
-# [重要] commitメッセージの書き方
+### 背景（製品開発のきっかけ、課題等）
 
-[${commit種別}] (${issue No.}) やったこと
+- 今回のプロダクトの開発に至った背景
+> 一人暮らしをしているなかで、食生活の管理は難しい問題の一つだろう。どうしても外食などで済ませてしまい、栄養価が偏りがちになってしまう。そこで、そんな悩みをサポートするIoTデバイスを作成することを目指した。
 
-## commit種別
+- 着目した顧客・顧客の課題・現状
+> 顧客は、自炊に慣れていない一人暮らしをする人である。特に、なにか料理を作ろうとしてもレシピがわからず、結局外食やコンビニに頼ってしまう。そういった人達のために、過去に食べてきた料理の栄養価から最適なレシピを選択し、さらに自炊をできるようにサポートしてくれるようなプロダクトの完成を目指した。
 
-- fix：バグ修正
-- add：新規（ファイル）機能追加
-- update：機能修正（バグではない）
-- remove：削除（ファイル）
+### 製品説明（具体的な製品の説明）
+こちらに製品の概要・特徴について説明を記載してください。
 
-## 例　（issue NO.なし）
+### 特長
 
-`[add] Hogehoge.pyを追加`
+#### 1. 特長1
+>声で伝えるだけで料理を教えてくれる。料理に集中しながらデバイスに料理を聞くことができる。手を使わずに操作をすることができるので、仮に料理をしていて、手を汚しても操作をすることだってできる。
 
-(意味) Hogehoge.pyを追加したよ
+#### 2. 特長2
+>amazon echoとLineを同時に利用し、リンクさせることで視覚的にも聴覚的にもレシピをユーザーに伝えることができる。
 
-## 例　（issue NO.あり）
+#### 3. 特長3
+>レシピを読み上げる時、区切りのいいところで待っていてくれるので、聴き逃しが無い。
 
-`[fix] #18 Hogehoge.pyを修正`
+### 解決出来ること
+>このプロダクトを利用することで、amazon echo、が必要な材料や料理の作り方を教えてくれます。それによって、自炊に慣れてない人も自炊が容易になるでしょう。また、声だけでデバイスにアクセスできるので料理の妨げになりません。
 
-(意味) issue18通りにHogehoge.pyのバグを修正したよ
+### 今後の展望
+> 精度の高い形態素解析を用いて、読みがなが難しい用語にも対応させたり、イントネーションにも抑揚をつけたい。また、今日の気温など、環境に合わせたレシピの提案をしてくれるなどの機能もつけたい。
 
-## ディレクトリツリー
 
-```
-├── LICENSE
-├── README.md
-├── RecordPlan.py
-├── docs
-│   └── _config.yml
-├── image.png
-├── lambda_function.py
-├── src
-│   ├── cook
-│   │   ├── gyoza
-│   │   │   ├── material.dic
-│   │   │   └── recipe.csv
-│   │   ├── harumaki
-│   │   │   ├── material.dic
-│   │   │   └── recipe.csv
-│   │   ├── nikujaga
-│   │   │   ├── material.dic
-│   │   │   └── recipe.csv
-│   │   ├── okonomiyaki
-│   │   │   ├── material.dic
-│   │   │   └── recipe.csv
-│   │   ├── omuraisu
-│   │   │   ├── material.dic
-│   │   │   └── recipe.csv
-│   │   └── tya-han
-│   │       ├── material.dic
-│   │       └── recipe.csv
-│   └── kernel
-│       ├── Malnutrition.py
-│       ├── RecipeSelecter.py
-│       ├── data
-│       │   └── Standard_Data.csv
-│       └── find_cook.py
-├── test
-│   ├── README.md
-│   └── find_cook_test.py
-└── tools
-    ├── database
-    │   ├── Cookpad.py
-    │   ├── IngredientReader.py
-    │   ├── createDB.py
-    │   ├── data
-    │   │   └── database.csv
-    │   └── test.py
-    ├── google
-    │   ├── GoogleSpreadSheetEditor.py
-    │   ├── README.md
-    │   ├── SSGA-3d11131f4a36.json
-    │   └── __pycache__
-    │       └── GoogleSpreadSheetEditor.cpython-35.pyc
-    └── main_tset.py
+## 開発内容・開発技術
+### 活用した技術
+#### API・データ
+今回スポンサーから提供されたAPI、製品などの外部技術があれば記述をして下さい。
+  
+*  LINE Notify
 
-```
+#### フレームワーク・ライブラリ・モジュール
+* Python
+* requests
+* sys
+* os
+* csv
+* random
+* gspread
+* oauth2client
+* Amazon Web Services
+
+#### デバイス
+* amazon echo
+
+### 研究内容・事前開発プロダクト（任意）
+ご自身やチームの研究内容や、事前に持ち込みをしたプロダクトがある場合は、こちらに実績なども含め記載をして下さい。
+
+* 
+* 
+
+
+### 独自開発技術（Hack Dayで開発したもの）
+#### 2日間に開発した独自の機能・技術
+* 独自で開発したものの内容をこちらに記載してください
+* 特に力を入れた部分をファイルリンク、またはcommit_idを記載してください（任意）
